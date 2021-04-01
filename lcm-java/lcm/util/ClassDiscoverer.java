@@ -21,7 +21,7 @@ public class ClassDiscoverer
         findClasses(cp, visitor);
     }
 
-    private static void visitDirectory(ClassVisitor visitor, URLClassLoader cldr, 
+    private static void visitDirectory(ClassVisitor visitor, URLClassLoader cldr,
             String classpath_entry, File dir, String visiting_classpath) {
         if(!dir.canRead())
             return;
@@ -116,7 +116,8 @@ public class ClassDiscoverer
                     }
 
                 } catch(IOException ioe) {
-                    System.out.println("Error extracting "+items[i]);
+                    System.out.println("Error extracting " + items[i]);
+                    System.out.println(ioe);
                 }
             } else {
                 File f = new File(item);
